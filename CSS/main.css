@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --main-color:#0078ff;
+
+}
+
+.navbar-toggler{
+    
+    background-color: white;
+}
+.navbar-toggler-icon{
+    color: white;
+}
+.navbar3 li::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+.navbar3 li:hover:after{
+visibility: visible;
+width: 80%;
+}
+.navbar3 li{
+    position: relative;
+   
+}
+
+
+.vip{
+    transform: translateX(-50%);
+}
+
+.hero-title{
+    color: #fff;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.content 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* content animation */
+.type {
+    display:inline-block;
+    vertical-align: bottom;
+    
+  }
+  
+  .type > span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display:grid;
+    overflow: hidden;
+    height:1.6em;
+  }
+  
+  .type span span {
+    width:0%;
+    max-width:max-content;
+    overflow: hidden;
+    height:inherit;
+    word-break:break-all;
+    animation:
+      c 0.5s infinite steps(4),  
+      t 2s linear infinite alternate,
+      m 12s steps(3) infinite;
+  }
+  .type span span:before {
+    content:" ";
+    display:inline-block;
+  }
+  
+  @keyframes t{
+    90%,100% {width:100%}
+  }
+  
+  @keyframes c{
+    0%,100%{box-shadow:5px 0 0 #0000}
+    50%    {box-shadow:5px 0 0 white }
+  }
+  
+  @keyframes m{
+    100% {transform:translateY(-300%)}
+  }
+  
+  
+  
+  
+  /*end of anaimation  */
+
+
+
+
+
+
+.overlay{
+background-color: rgba(0, 0, 0, 0.7);
+}
+.header{
+    background-image: url(../images/hero-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+@media screen and (max-width:640px) {
+    .header{
+        height: 100%;
+        background-image: url(../images/hero-bg.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+    
+}
+.space-y{
+    margin-block: 65px;
+}
+
+/* start of about me */
+.about-me h5::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left:50px;
+    width: 100px;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: #0078ff;
+    margin-top: 10px;
+
+}
+.title-s{
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem
+}
+/* services */
+.icon-circle{
+    height: 100px;
+    width: 100px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #0078ff;
+    transition: all 0.5s;
+  
+}
+.services .card:hover .icon-circle{
+    background-color: #0078ff;
+    box-shadow: 0 0 0 10px #b2d0f1;
+
+  
+}
+
+
+.icon-circle:hover i{
+    color: white;
+}
+
+.services .services-p::after{
+
+    content: '';
+    position: absolute;
+    top: 130%;
+    left:50%;
+    width: 40px;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: #0078ff;
+   
+
+
+}
+/* start of work */
+
+
+.work{
+
+    background-image: url(../images/counters-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.work .overlay{
+  
+    width: 100%;
+    
+    background-color: rgba(0, 120, 255,0.5);
+}
+.icon-circle2{
+    text-align: center;
+    height: 55px;
+    width: 55px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+ 
+    box-shadow: 0 0 0 10px #fff;
+    
+}
+
+.container-space{
+    margin-top: 75px;
+    margin-bottom:100px ;
+}
+.work i{
+    color:#fff;
+}
+.work .info-box{
+    color: #fff;
+}
+
+
+/* start of portfolio */
+.icon{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    border:3px solid #0078ff;
+   
+}
+.span-color{
+    color: #0078ff;
+}
+.box-title p::after{
+    content: '';
+    position: absolute;
+    top: 130%;
+    left:50%;
+    width: 40px;
+    height: 5px;
+    transform: translateX(-50%);
+    background-color: #0078ff;
+   
+}
+.portfolio .card img{
+    transition: all 1s;
+}
+
+.portfolio .card:hover img{
+    transform: scale(1.1);
+
+}
+/* end of portfolio */
+/* start of slider */
+.slider{
+    background-image: url(../images/overlay-bg.jpg );
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.slider .overlay{
+  
+    width: 100%;
+    
+    background-color: rgba(0, 120, 255,0.5);
+}
+.carousel-item img {
+width: 200px;
+height: 200px;
+
+}
+
+.item{
+    color: #fff;
+}
+.item2{
+    color: #fff;
+}
+.item2 img{
+    width:102px;
+    height: 150px;
+}
+
+ .item img{
+    width:150px;
+    height: 150px;
+
+ }         
+.carousel-indicators{
+    position: static;
+}
+.carousel-indicators [data-bs-target]{
+    width: 12px;
+    height: 12px;
+}
+/* start of blog */
+.section1 img{
+width: 25px;
+height: 25px;
+}
+.badge-s{
+    transform: translatx(50%);
+}
+
+.blog .card-footer a{
+    color:#1e1e1e;
+    transition: all 1s;
+}
+.blog .card-footer:hover a{
+    color: #0062d3;
+}
+.blog h5{
+    transition: all 0.8s;
+}
+.blog h5:hover{
+    color: #0062d3;
+}
+.card-box {
+    position: absolute;
+    text-align: center;
+    top: -16px;
+    left: 15px;
+    right: 15px;
+    
+}
+.contact{
+    background-image: url(../images/overlay-bg.jpg );
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contact .overlay{
+    
+    width: 100%;
+    
+    background-color: rgba(0, 120, 255,0.5);
+}
+.box-title2 h5::after{
+    content: '';
+    position: absolute;
+    top:80%;
+    left: 0;
+    width: 100px;
+    height: 3px;
+   
+    background-color: #0078ff;
+}
+.contact i{
+    color: #0078ff;
+}
+.icon3{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    border:3px solid #0078ff;
+}
+.footer{
+    background-color: #0062d3;
+}
